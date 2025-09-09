@@ -1,0 +1,243 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muskan Lohar — Portfolio</title>
+  <meta name="description" content="Muskan Lohar — MCA student, developer: Java, Python, Web, ML, SQL. Portfolio & resume." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons & AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+  <!-- Vanta.js & Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js" defer></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+
+  <style>
+    :root{
+      --accent: #60a5fa;
+      --muted: #9aa4b2;
+      --card: rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.04);
+    }
+    html,body { height:100%; }
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      margin:0;
+      background: linear-gradient(180deg,#0b1020 0%, #0f1724 100%);
+      color: #e6eefb;
+    }
+    .nav-bg { backdrop-filter: blur(8px); background: linear-gradient(90deg, rgba(6,6,9,0.5), rgba(12,12,18,0.35)); }
+    .profile-img { width:140px;height:140px;border-radius:9999px;object-fit:cover;border:4px solid rgba(255,255,255,0.04); }
+    .skill-badge { background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:10px; padding:.6rem; border:1px solid rgba(255,255,255,0.03); }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:1.25rem; box-shadow: 0 6px 24px rgba(2,6,23,0.6); }
+    footer { color: #9aa4b2; font-size:.95rem; padding:1.25rem 0; text-align:center; }
+    a.link-muted { color: var(--muted); text-decoration:underline; }
+    @media (max-width:900px){ .hero-grid { grid-template-columns: 1fr !important; text-align:center; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav-bg fixed w-full z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <!-- Updated Name Here -->
+        <div class="text-xl font-bold text-indigo-300 px-3 py-1 rounded-md">Muskan <span style="color:#fafad2">Lohar</span></div>
+        <nav class="hidden md:flex gap-4 text-sm text-white/90">
+          <a href="#home" class="hover:text-indigo-300">Home</a>
+          <a href="#about" class="hover:text-indigo-300">About</a>
+          <a href="#skills" class="hover:text-indigo-300">Skills</a>
+          <a href="#projects" class="hover:text-indigo-300">Projects</a>
+          <a href="#certifications" class="hover:text-indigo-300">Certifications</a>
+          <a href="#contact" class="hover:text-indigo-300">Contact</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/Muskan100102" target="_blank" class="hover:text-indigo-300"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/muskan-lohar-ab9b63335" target="_blank" class="hover:text-indigo-300"><i class="fab fa-linkedin"></i></a>
+        <button id="menu-btn" class="md:hidden p-2 rounded-md"><i class="fa fa-bars text-lg"></i></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-transparent px-4 pb-4">
+      <div class="flex flex-col gap-2 text-white/90">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="pt-20">
+    <section id="home" class="min-h-screen relative overflow-hidden">
+      <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
+      <div id="particles-js" class="absolute inset-0 -z-20"></div>
+
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid hero-grid grid-cols-2 gap-10 items-center">
+          <div data-aos="fade-right">
+            <h1 class="text-4xl md:text-5xl font-extrabold">Hi, I'm <span style="color:#f08080">Muskan Lohar</span></h1>
+            <p class="mt-4 text-lg text-white/80">MCA student | Aspiring Java & Python developer | Web & ML enthusiast</p>
+
+            <div class="mt-6 flex flex-wrap gap-3 items-center">
+              <a href="#projects" class="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-black font-semibold px-4 py-2 rounded-full">
+                View Projects <i class="fa fa-arrow-right"></i>
+              </a>
+              <a href="https://docs.google.com/document/d/18bpmgavasUHUlqqcDvvoD1cNyDxDwvU0/edit?usp=drive_link&ouid=100353144654017381401&rtpof=true&sd=true" download class="inline-flex items-center gap-2 border border-white/5 px-4 py-2 rounded-md hover:bg-white/5 text-sm">
+                <i class="fa fa-file-download"></i> Download Resume
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center" data-aos="fade-left">
+            <div class="card flex flex-col items-center">
+              <img src="image.png" alt="Muskan" class="profile-img shadow-md" />
+              <h3 class="mt-4 text-xl font-bold">Muskan Lohar</h3>
+              <p class="text-sm text-white/70">MCA — Mandsaur University</p>
+              <p class="mt-3 text-sm text-white/75">BCA — Rajiv Gandhi Govt. P.G College</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="card" data-aos="fade-up">
+          <h2 class="text-2xl font-bold">About Me</h2>
+          <p class="mt-3 text-white/80">
+            Hello! I'm <strong>Muskan Lohar</strong>, currently pursuing MCA at Mandsaur University.  
+            Completed my BCA from Rajiv Gandhi Govt. P.G College in 2022 (CGPA 7.5/10).
+          </p>
+          <p class="mt-3 text-white/80">
+            I am passionate about web development, problem-solving, AI, and ML.  
+            Love exploring new technologies and building creative projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-16 bg-gradient-to-b from-transparent to-white/2">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="card" data-aos="fade-up">
+          <h2 class="text-2xl font-bold">Technical Skills</h2>
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="skill-badge text-center"><b>Languages</b><div>C, C++, Java, Python</div></div>
+            <div class="skill-badge text-center"><b>Web</b><div>HTML, CSS, JavaScript, React, Node.js</div></div>
+            <div class="skill-badge text-center"><b>Databases</b><div>DBMS, SQL, MySQL, MongoDB</div></div>
+            <div class="skill-badge text-center"><b>AI & ML</b><div>ML basics, Pandas, NumPy</div></div>
+            <div class="skill-badge text-center"><b>Tools</b><div>Git, GitHub, VS Code, Jupyter</div></div>
+            <div class="skill-badge text-center"><b>Concepts</b><div>DSA, OOP, REST APIs</div></div>
+            <div class="skill-badge text-center"><b>BI</b><div>Power BI</div></div>
+            <div class="skill-badge text-center"><b>OS</b><div>Linux</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="card" data-aos="fade-up">
+          <h2 class="text-2xl font-bold">Academic Projects</h2>
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="skill-badge">Online Calculator — HTML, CSS, JS</div>
+            <div class="skill-badge">Portfolio Website — HTML, CSS, JS</div>
+            <div class="skill-badge">Library Management — Java, MySQL</div>
+            <div class="skill-badge">Student Grading System — Java, MySQL</div>
+            <div class="skill-badge">Digital Clock — HTML, CSS, JS</div>
+            <div class="skill-badge">Digital Education Platform — HTML, CSS, JS, MySQL</div>
+            <div class="skill-badge">AI Blogging Platform — React, Node.js, DBMS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-16 bg-gradient-to-b from-transparent to-white/2">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="card" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-center mb-6">🎓 Certifications</h2>
+          <p class="text-center text-white/70 mb-8 text-sm">Completed Sololearn certifications to enhance my development skills.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col items-center text-center hover:scale-105 hover:shadow-xl transition-transform duration-300">
+              <i class="fas fa-code text-4xl text-indigo-400 mb-3"></i>
+              <h3 class="font-semibold text-lg">Java Programming</h3>
+              <p class="text-sm text-white/70">Sololearn</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col items-center text-center hover:scale-105 hover:shadow-xl transition-transform duration-300">
+              <i class="fab fa-cuttlefish text-4xl text-green-400 mb-3"></i>
+              <h3 class="font-semibold text-lg">C++ Fundamentals</h3>
+              <p class="text-sm text-white/70">Sololearn</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col items-center text-center hover:scale-105 hover:shadow-xl transition-transform duration-300">
+              <i class="fab fa-js text-4xl text-yellow-400 mb-3"></i>
+              <h3 class="font-semibold text-lg">JavaScript Essentials</h3>
+              <p class="text-sm text-white/70">Sololearn</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col items-center text-center hover:scale-105 hover:shadow-xl transition-transform duration-300">
+              <i class="fab fa-python text-4xl text-blue-400 mb-3"></i>
+              <h3 class="font-semibold text-lg">Python for Beginners</h3>
+              <p class="text-sm text-white/70">Sololearn</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-lg p-5 flex flex-col items-center text-center hover:scale-105 hover:shadow-xl transition-transform duration-300">
+              <i class="fas fa-database text-4xl text-pink-400 mb-3"></i>
+              <h3 class="font-semibold text-lg">Intro to Data Science</h3>
+              <p class="text-sm text-white/70">Sololearn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="card" data-aos="fade-up">
+          <h2 class="text-2xl font-bold">Get in Touch</h2>
+          <p class="text-white/70 mt-2">Email: <a href="mailto:smileblacksmith.com@gmail.com" class="link-muted">smileblacksmith.com@gmail.com</a></p>
+          <p class="text-white/70">Phone: <span class="link-muted">(+91) 7898809742</span></p>
+          <div class="mt-6 flex gap-3 text-2xl">
+            <a href="https://github.com/Muskan100102" target="_blank" class="hover:text-indigo-300"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/muskan-lohar-ab9b63335" target="_blank" class="hover:text-indigo-300"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.hackerrank.com/profile/smileblacksmith" target="_blank" class="hover:text-indigo-300"><i class="fab fa-hackerrank"></i></a>
+            <a href="https://leetcode.com/Muskan_Lohar/" target="_blank" class="hover:text-indigo-300"><i class="fa-solid fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="max-w-6xl mx-auto px-6">
+        <p>&copy; <span id="yr"></span> Muskan Lohar — All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      AOS.init({ duration: 900, once: true });
+      document.getElementById('yr').textContent = new Date().getFullYear();
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
